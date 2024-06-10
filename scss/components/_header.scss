@@ -1,0 +1,104 @@
+.header{
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+.header__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__navigation__list{
+    display: flex;
+}
+.header__contakts__item{
+    margin-left: 50px;
+}
+.header__navigation{
+    display: flex;
+    align-items: center;
+}
+.header__logo{
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: $logo-second;
+    margin-right: 93px;
+}
+.header__logo__span{
+    color: $logo-first;
+}
+.header__navigation__item{
+    margin-right: 50px;
+}
+.header__navigation__link{
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    color: $text-header;
+    position: relative;
+}
+.header__navigation__link:hover,
+.header__navigation__link:focus{
+    animation-name: navigationLink;
+    animation-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+}
+@keyframes navigationLink{
+    0%{color: $text-header;}
+    100%{color: $logo-first;}
+}
+
+.header__navigation__link.current::after{
+    content: "";
+    display: block;
+    background-color: $logo-first;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -33px;
+    transition-property: background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: ease;
+}
+.header__navigation__link:hover.current::after,
+.header__navigation__link:focus.current::after{
+background-color: $text-header;
+box-shadow: 0px 2px 2px 0px $shadow-color;
+transition: background-color 250ms ease;
+}
+.header__contakts{
+    display: flex;
+}
+.header__contakts__link{
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    color: $text-number;
+    display: flex;
+    align-items: center;
+}
+.header__contakts__icon{
+    margin: 10px;
+    fill: $text-number;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header__contakts__link:hover .header__contakts__icon{
+fill: $logo-first;
+}
+.contakts .header__contakts__link:hover{
+    color: $logo-first;
+}
+.header__contakts__link:hover,
+.header__contakts__link:focus{
+    animation-name: contaktsLink;
+    animation-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+}
+@keyframes contaktsLink{
+    0%{color: $text-number;}
+    100%{color: $logo-first;}
+}

@@ -1,0 +1,108 @@
+.portfolio__filter{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.portfolio__filter__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 8px;
+}
+.portfolio__filter__button{
+    font-size: 16px;
+    font-weight: 500;
+    line-height:162.5%;
+    letter-spacing: 0.48px;
+    border: none;
+    margin-right: 8px;
+    background-color: $filter-button;
+    border-radius: 4px;
+ }
+ @keyframes filterButton{
+    0%{background-color: $filter-button;}
+    100%{background-color: $logo-first; box-shadow: 0px 2px 2px 0px $shadow-color;}
+ }
+ .portfolio__filter__button:hover,
+ .portfolio__filter__button:focus{
+    animation-name: filterButton;
+    animation-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+}
+ .portfolio__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+ }
+ .portfolio-item{
+    flex-basis: calc((100% - 60px) / 3);
+    border: 1px solid rgba(238, 238, 238, 1);
+    max-width: 370px;
+ }
+ .portfolio__item:hover,
+ .portfolio__item:focus{
+    animation-name: portfolioItem;
+    animation-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+}
+@keyframes portfolioItem{
+    0%{box-shadow: none;}
+    100%{box-shadow: 0px 4px 5px 0px $shadow-color;}
+ }
+ .portfolio__link:hover .portfolio__product__action{
+    opacity: 1;
+    transform: translateY(0%);
+    overflow: hidden;
+}
+.portfolio__product__action{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+    font-size: 18px;
+    color: $header-color;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    background-color: $portfolio;
+    transition-property: opacity, transform;
+    transform: translateY(100%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+ .portfolio__title{
+    font-size: 18px;
+    font-weight: 700;
+    line-height:200%;
+    letter-spacing: 1.08px;
+    color: $primary-text;
+    margin-top: 20px;
+    margin-left: 24px;
+}
+.portfolio__title
+.portfolio__text{
+    padding-left: 24px;
+    padding-top: 24px;
+}
+.portfolio__text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height:187.5%;
+    letter-spacing: 0.48px;
+    color: $secondary-text;
+    margin-bottom: 20px;
+    margin-left: 24px;
+}
+.portfolio__div{
+    position: relative;
+    overflow: hidden;
+}
+.botton__div{
+    display: flex;
+    justify-content: center;
+}
+
+
+

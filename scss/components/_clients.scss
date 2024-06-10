@@ -1,0 +1,40 @@
+.clients__title{
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1.08px;
+    color: $primary-text;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.clients__list{
+    display: flex;
+    justify-content: space-between;
+}
+.client{
+    margin-top: 94px;
+    margin-bottom: 94px;
+}
+.clients__link{
+    border: solid 1px $icon-color;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $icon-color;
+}
+.clients__link:hover{
+    animation-name: clientsLink;
+    animation-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+}
+@keyframes clientsLink{
+    0%{fill: $icon-color;}
+    100%{fill: $logo-first; border: solid 1px $logo-first;}
+}
+.clients-icon{
+    width: 106px;
+    height: 60px;
+}
