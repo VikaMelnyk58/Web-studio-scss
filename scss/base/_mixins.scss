@@ -1,0 +1,17 @@
+@mixin title(){
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1.08px;
+    color: $primary-text;
+    margin-bottom: 50px;
+    text-align: center;
+}
+@mixin flex(){
+    display: flex;
+    align-items: center;
+}
+@mixin logo(){
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+}

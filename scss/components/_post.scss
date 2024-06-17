@@ -1,3 +1,4 @@
+
 .post{
     background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/post-one.jpg);
     padding-top: 200px;
@@ -11,9 +12,8 @@
     text-transform: uppercase;
     color: $header-color;
 }
-.post__botton__div{
-    display: flex;
-    justify-content: center;
+.post__botton-div{
+    @extend %flex;
 }
 .post__button{
     font-size: 16px;
@@ -26,9 +26,8 @@
     border: none;
     border-radius: 4px;
 }
-.post__title__div{
-    display: flex;
-    justify-content: center;
+.post__title-div{
+    @extend %flex;
     margin-bottom: 30px;
 }
 
@@ -63,14 +62,13 @@
 }
 .close{
     border: 1px solid $elips-color;
-    display: flex;
+    @include flex();
     border-radius: 50%;
     background-color: $header-color;
     cursor: pointer;
     width: 44px;
     height: 44px;
     justify-content: center;
-    align-items: center;
     margin-left: 490px;
     margin-right: 8px;
     transition-property: fill;
@@ -126,8 +124,7 @@
 
 .text-main{
     font-size: 20px;
-    display: flex;
-    justify-content: center;
+    @extend %flex;
 }
 .backdrop{
     position: fixed;
@@ -151,8 +148,7 @@
     overflow: hidden;
 }
 .modal-consent{
-    display: flex;
-    justify-content: center;
+    @extend %flex;
     margin-top: 20px;
 }
 .checkbox{

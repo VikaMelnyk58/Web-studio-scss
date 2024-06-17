@@ -32,26 +32,19 @@
     padding-bottom: 30px;
     padding-top: 10px;
 }
-.team__cart__list{
-    display: flex;
-    justify-content: center;
+.team__cart-list{
+    @extend %flex;
     gap: 10px;
     margin-bottom: 30px;
     margin-top: 16px;
 }
 .team__title{
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: 1.08px;
-    color: $primary-text;
-    margin-bottom: 50px;
-    text-align: center;
+    @include title();
 }
 .team__social{
 width: 44px;
 height: 44px;
-display: flex;
-align-items: center;
+@include flex();
 justify-content: center;
 fill: $text-number;
 border-radius: 50%;

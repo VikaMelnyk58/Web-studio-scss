@@ -8,37 +8,35 @@
 } 
 .footer__logo{
     color: $logo-first;
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
+    @include logo();
 }
-.footer__logo__span{
+.footer__logo-span{
     color: $header-color;
 }
-.footer__address__two{
+.footer__address-two{
     display: flex;
     flex-direction: column;
 }
-.footer__address__name{
+.footer__address-name{
     font-weight: 400;
     line-height:171.429%;
     letter-spacing: 0.42px;
     color: $main-color-second;
     margin-top: 20px;
 }
-.footer__address__name:hover,
-.footer__address__name:focus{
+.footer__address-name:hover,
+.footer__address-name:focus{
     color: $logo-first;
 }
-.footer__address__link{
+.footer__address-link{
     font-weight: 400;
     line-height:171.429%;
     letter-spacing: 0.42px;
     color: $footer-color-second;
     margin-top: 9px;
 }
-.footer__address__link:hover,
-.footer__address__link:focus{
+.footer__address-link:hover,
+.footer__address-link:focus{
     color: $logo-first;
 }
 .footer__socials{
@@ -56,8 +54,7 @@
 .footer__social{
     width: 44px;
     height: 44px;
-    display: flex;
-    align-items:center;
+    @include flex();
     justify-content: center;
     fill: $filter-button;
     border-radius: 50%;
@@ -78,13 +75,13 @@
     height: 20px;
 }
 
-.footer__text__subscribe{
+.footer__text-subscribe{
     color: $filter-button;
     margin-bottom: 20px;
     text-transform: uppercase;
     margin-left: 93px;
 }
-.footer__input__email{
+.footer__input-email{
     background-color: $footer-posision;
     border: 2px solid $close-color;
     border-radius: 4px;

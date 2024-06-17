@@ -3,41 +3,37 @@
     padding-bottom: 25px;
 }
 .header__wrap{
-    display: flex;
-    align-items: center;
+    @include flex();
     justify-content: space-between;
 }
-.header__navigation__list{
+.header__navigation-list{
     display: flex;
 }
-.header__contakts__item{
+.header__contakts-item{
     margin-left: 50px;
 }
 .header__navigation{
-    display: flex;
-    align-items: center;
+    @include flex();
 }
 .header__logo{
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
+    @include logo();
     color: $logo-second;
     margin-right: 93px;
 }
-.header__logo__span{
+.header__logo-span{
     color: $logo-first;
 }
-.header__navigation__item{
+.header__navigation-item{
     margin-right: 50px;
 }
-.header__navigation__link{
+.header__navigation-link{
     font-weight: 500;
     letter-spacing: 0.28px;
     color: $text-header;
     position: relative;
 }
-.header__navigation__link:hover,
-.header__navigation__link:focus{
+.header__navigation-link:hover,
+.header__navigation-link:focus{
     animation-name: navigationLink;
     animation-duration: 250ms;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,7 +44,7 @@
     100%{color: $logo-first;}
 }
 
-.header__navigation__link.current::after{
+.header__navigation-link.current::after{
     content: "";
     display: block;
     background-color: $logo-first;
@@ -62,8 +58,8 @@
     transition-duration: 250ms;
     transition-timing-function: ease;
 }
-.header__navigation__link:hover.current::after,
-.header__navigation__link:focus.current::after{
+.header__navigation-link:hover.current::after,
+.header__navigation-link:focus.current::after{
 background-color: $text-header;
 box-shadow: 0px 2px 2px 0px $shadow-color;
 transition: background-color 250ms ease;
@@ -71,28 +67,27 @@ transition: background-color 250ms ease;
 .header__contakts{
     display: flex;
 }
-.header__contakts__link{
+.header__contakts-link{
     font-weight: 500;
     letter-spacing: 0.28px;
     color: $text-number;
-    display: flex;
-    align-items: center;
+    @include flex();
 }
-.header__contakts__icon{
+.header__contakts-icon{
     margin: 10px;
     fill: $text-number;
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__contakts__link:hover .header__contakts__icon{
+.header__contakts-link:hover .header__contakts-icon{
 fill: $logo-first;
 }
-.contakts .header__contakts__link:hover{
+.contakts .header__contakts-link:hover{
     color: $logo-first;
 }
-.header__contakts__link:hover,
-.header__contakts__link:focus{
+.header__contakts-link:hover,
+.header__contakts-link:focus{
     animation-name: contaktsLink;
     animation-duration: 250ms;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

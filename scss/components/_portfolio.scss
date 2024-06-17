@@ -2,14 +2,14 @@
     padding-top: 94px;
     padding-bottom: 94px;
 }
-.portfolio__filter__list{
+.portfolio__filter-list{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
     gap: 8px;
 }
-.portfolio__filter__button{
+.portfolio__filter-button{
     font-size: 16px;
     font-weight: 500;
     line-height:162.5%;
@@ -23,8 +23,8 @@
     0%{background-color: $filter-button;}
     100%{background-color: $logo-first; box-shadow: 0px 2px 2px 0px $shadow-color;}
  }
- .portfolio__filter__button:hover,
- .portfolio__filter__button:focus{
+ .portfolio__filter-button:hover,
+ .portfolio__filter-button:focus{
     animation-name: filterButton;
     animation-duration: 250ms;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -52,12 +52,12 @@
     0%{box-shadow: none;}
     100%{box-shadow: 0px 4px 5px 0px $shadow-color;}
  }
- .portfolio__link:hover .portfolio__product__action{
+ .portfolio__link:hover .portfolio__product-action{
     opacity: 1;
     transform: translateY(0%);
     overflow: hidden;
 }
-.portfolio__product__action{
+.portfolio__product-action{
     position: absolute;
     top: 0;
     left: 0;
@@ -100,8 +100,7 @@
     overflow: hidden;
 }
 .botton__div{
-    display: flex;
-    justify-content: center;
+    @extend %flex;
 }
 
 

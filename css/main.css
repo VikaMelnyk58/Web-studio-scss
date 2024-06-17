@@ -1,3 +1,8 @@
+.botton__div, .clients__link, .team__cart-list, .modal-consent, .text-main, .post__title-div, .post__botton-div {
+  display: flex;
+  justify-content: center;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -52,11 +57,11 @@ img {
   justify-content: space-between;
 }
 
-.header__navigation__list {
+.header__navigation-list {
   display: flex;
 }
 
-.header__contakts__item {
+.header__contakts-item {
   margin-left: 50px;
 }
 
@@ -73,23 +78,23 @@ img {
   margin-right: 93px;
 }
 
-.header__logo__span {
+.header__logo-span {
   color: rgb(33, 150, 243);
 }
 
-.header__navigation__item {
+.header__navigation-item {
   margin-right: 50px;
 }
 
-.header__navigation__link {
+.header__navigation-link {
   font-weight: 500;
   letter-spacing: 0.28px;
   color: rgb(33, 33, 33);
   position: relative;
 }
 
-.header__navigation__link:hover,
-.header__navigation__link:focus {
+.header__navigation-link:hover,
+.header__navigation-link:focus {
   animation-name: navigationLink;
   animation-duration: 250ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -104,7 +109,7 @@ img {
     color: rgb(33, 150, 243);
   }
 }
-.header__navigation__link.current::after {
+.header__navigation-link.current::after {
   content: "";
   display: block;
   background-color: rgb(33, 150, 243);
@@ -119,8 +124,8 @@ img {
   transition-timing-function: ease;
 }
 
-.header__navigation__link:hover.current::after,
-.header__navigation__link:focus.current::after {
+.header__navigation-link:hover.current::after,
+.header__navigation-link:focus.current::after {
   background-color: rgb(33, 33, 33);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
   transition: background-color 250ms ease;
@@ -130,7 +135,7 @@ img {
   display: flex;
 }
 
-.header__contakts__link {
+.header__contakts-link {
   font-weight: 500;
   letter-spacing: 0.28px;
   color: rgb(117, 117, 117);
@@ -138,7 +143,7 @@ img {
   align-items: center;
 }
 
-.header__contakts__icon {
+.header__contakts-icon {
   margin: 10px;
   fill: rgb(117, 117, 117);
   transition-property: fill;
@@ -146,16 +151,16 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header__contakts__link:hover .header__contakts__icon {
+.header__contakts-link:hover .header__contakts-icon {
   fill: rgb(33, 150, 243);
 }
 
-.contakts .header__contakts__link:hover {
+.contakts .header__contakts-link:hover {
   color: rgb(33, 150, 243);
 }
 
-.header__contakts__link:hover,
-.header__contakts__link:focus {
+.header__contakts-link:hover,
+.header__contakts-link:focus {
   animation-name: contaktsLink;
   animation-duration: 250ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -185,11 +190,6 @@ img {
   color: rgb(255, 255, 255);
 }
 
-.post__botton__div {
-  display: flex;
-  justify-content: center;
-}
-
 .post__button {
   font-size: 16px;
   font-weight: 700;
@@ -202,9 +202,7 @@ img {
   border-radius: 4px;
 }
 
-.post__title__div {
-  display: flex;
-  justify-content: center;
+.post__title-div {
   margin-bottom: 30px;
 }
 
@@ -241,13 +239,13 @@ img {
 .close {
   border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
+  align-items: center;
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
   width: 44px;
   height: 44px;
   justify-content: center;
-  align-items: center;
   margin-left: 490px;
   margin-right: 8px;
   transition-property: fill;
@@ -312,8 +310,6 @@ img {
 
 .text-main {
   font-size: 20px;
-  display: flex;
-  justify-content: center;
 }
 
 .backdrop {
@@ -340,8 +336,6 @@ img {
 }
 
 .modal-consent {
-  display: flex;
-  justify-content: center;
   margin-top: 20px;
 }
 
@@ -477,7 +471,7 @@ img {
   text-align: center;
 }
 
-.work__text__posision {
+.work__text-posision {
   position: absolute;
   bottom: 0;
   margin: 0;
@@ -530,9 +524,7 @@ img {
   padding-top: 10px;
 }
 
-.team__cart__list {
-  display: flex;
-  justify-content: center;
+.team__cart-list {
   gap: 10px;
   margin-bottom: 30px;
   margin-top: 16px;
@@ -602,8 +594,6 @@ img {
   border-radius: 4px;
   width: 170px;
   height: 92px;
-  display: flex;
-  justify-content: center;
   align-items: center;
   fill: rgb(175, 177, 184);
 }
@@ -646,16 +636,16 @@ img {
   font-weight: 700;
 }
 
-.footer__logo__span {
+.footer__logo-span {
   color: rgb(255, 255, 255);
 }
 
-.footer__address__two {
+.footer__address-two {
   display: flex;
   flex-direction: column;
 }
 
-.footer__address__name {
+.footer__address-name {
   font-weight: 400;
   line-height: 171.429%;
   letter-spacing: 0.42px;
@@ -663,12 +653,12 @@ img {
   margin-top: 20px;
 }
 
-.footer__address__name:hover,
-.footer__address__name:focus {
+.footer__address-name:hover,
+.footer__address-name:focus {
   color: rgb(33, 150, 243);
 }
 
-.footer__address__link {
+.footer__address-link {
   font-weight: 400;
   line-height: 171.429%;
   letter-spacing: 0.42px;
@@ -676,8 +666,8 @@ img {
   margin-top: 9px;
 }
 
-.footer__address__link:hover,
-.footer__address__link:focus {
+.footer__address-link:hover,
+.footer__address-link:focus {
   color: rgb(33, 150, 243);
 }
 
@@ -728,14 +718,14 @@ img {
   height: 20px;
 }
 
-.footer__text__subscribe {
+.footer__text-subscribe {
   color: rgb(245, 244, 250);
   margin-bottom: 20px;
   text-transform: uppercase;
   margin-left: 93px;
 }
 
-.footer__input__email {
+.footer__input-email {
   background-color: rgba(47, 48, 58, 0.8);
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -761,7 +751,7 @@ img {
   padding-bottom: 94px;
 }
 
-.portfolio__filter__list {
+.portfolio__filter-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -769,7 +759,7 @@ img {
   gap: 8px;
 }
 
-.portfolio__filter__button {
+.portfolio__filter-button {
   font-size: 16px;
   font-weight: 500;
   line-height: 162.5%;
@@ -789,8 +779,8 @@ img {
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
   }
 }
-.portfolio__filter__button:hover,
-.portfolio__filter__button:focus {
+.portfolio__filter-button:hover,
+.portfolio__filter-button:focus {
   animation-name: filterButton;
   animation-duration: 250ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -826,13 +816,13 @@ img {
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
   }
 }
-.portfolio__link:hover .portfolio__product__action {
+.portfolio__link:hover .portfolio__product-action {
   opacity: 1;
   transform: translateY(0%);
   overflow: hidden;
 }
 
-.portfolio__product__action {
+.portfolio__product-action {
   position: absolute;
   top: 0;
   left: 0;
@@ -876,9 +866,4 @@ img {
 .portfolio__div {
   position: relative;
   overflow: hidden;
-}
-
-.botton__div {
-  display: flex;
-  justify-content: center;
 }/*# sourceMappingURL=main.css.map */
