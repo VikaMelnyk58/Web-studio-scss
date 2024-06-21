@@ -1,20 +1,25 @@
-.work__list{
+.work {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .work__list {
     display: flex;
     justify-content: space-between;
-}
-.work__item{
+  }
+  .work__item {
     width: 370px;
-}
-.work__posision{
+  }
+  .work__posision {
     position: relative;
-}
-.work{
+  }
+  .work {
+    display: block;
     padding-bottom: 94px;
-}
-.work__title{
+  }
+  .work__title {
     @include title();
-}
-.work__text-posision{
+  }
+  .work__text-posision {
     position: absolute;
     bottom: 0;
     margin: 0;
@@ -25,4 +30,5 @@
     text-align: center;
     padding-top: 27px;
     padding-bottom: 27px;
+  }
 }
