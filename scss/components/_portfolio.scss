@@ -1,107 +1,240 @@
-.portfolio__filter{
-    padding-top: 94px;
-    padding-bottom: 94px;
+.portfolio__filter {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-.portfolio__filter-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-    gap: 8px;
+.portfolio__filter-button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 162.5%;
+  letter-spacing: 0.48px;
+  border: none;
+  margin-right: 8px;
+  background-color: $filter-button;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.portfolio__filter-button{
-    font-size: 16px;
-    font-weight: 500;
-    line-height:162.5%;
-    letter-spacing: 0.48px;
-    border: none;
-    margin-right: 8px;
+@keyframes filterButton {
+  0% {
     background-color: $filter-button;
-    border-radius: 4px;
- }
- @keyframes filterButton{
-    0%{background-color: $filter-button;}
-    100%{background-color: $logo-first; box-shadow: 0px 2px 2px 0px $shadow-color;}
- }
- .portfolio__filter-button:hover,
- .portfolio__filter-button:focus{
-    animation-name: filterButton;
-    animation-duration: 250ms;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    animation-fill-mode: forwards;
+  }
+  100% {
+    background-color: $logo-first;
+    box-shadow: 0px 2px 2px 0px $shadow-color;
+  }
 }
- .portfolio__list{
+.portfolio__filter-button:hover,
+.portfolio__filter-button:focus {
+  animation-name: filterButton;
+  animation-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+}
+.portfolio__filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 8px;
+}
+.portfolio__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 187.5%;
+  letter-spacing: 0.48px;
+  color: $secondary-text;
+}
+.portfolio__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 200%;
+  letter-spacing: 1.08px;
+  color: $primary-text;
+}
+.portfolio-item {
+  // flex-basis: calc((100% - 60px) / 3);
+  border: 1px solid rgba(238, 238, 238, 1);
+  width: 290px;
+  margin-bottom: 30px;
+}
+.portfolio__item:hover,
+.portfolio__item:focus {
+  animation-name: portfolioItem;
+  animation-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+}
+@keyframes portfolioItem {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0px 4px 5px 0px $shadow-color;
+  }
+}
+.portfolio__list {
+  margin: 0 auto;
+}
+
+.portfolio__product-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 65px 24px;
+  font-size: 14px;
+  color: $header-color;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+}
+.portfolio__link:hover .portfolio__product-action {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.portfolio__wrap {
+  padding: 20px 24px;
+  margin-bottom: 30px;
+}
+.portfolio__div {
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 480px) {
+  .portfolio-item {
+    width: 480px;
+    margin-bottom: 0;
+  }
+  .portfolio__product-action {
+    font-size: 18px;
+    padding: 110px 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    width: 354px;
+    margin-bottom: 0px;
+  }
+  .portfolio__list {
     display: flex;
     flex-wrap: wrap;
+    gap: 27px;
+  }
+  .portfolio__product-action {
+    padding: 54px 24px;
+  }
+  .portfolio__filter-list {
     justify-content: center;
-    gap: 30px;
- }
- .portfolio-item{
-    flex-basis: calc((100% - 60px) / 3);
-    border: 1px solid rgba(238, 238, 238, 1);
-    max-width: 370px;
- }
- .portfolio__item:hover,
- .portfolio__item:focus{
-    animation-name: portfolioItem;
-    animation-duration: 250ms;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    animation-fill-mode: forwards;
+  }
 }
-@keyframes portfolioItem{
-    0%{box-shadow: none;}
-    100%{box-shadow: 0px 4px 5px 0px $shadow-color;}
- }
- .portfolio__link:hover .portfolio__product-action{
-    opacity: 1;
-    transform: translateY(0%);
-    overflow: hidden;
-}
-.portfolio__product-action{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 63px 24px;
-    font-size: 18px;
-    color: $header-color;
-    letter-spacing: 0.03em;
-    line-height: 1.6;
-    background-color: $portfolio;
-    transition-property: opacity, transform;
-    transform: translateY(100%);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
- .portfolio__title{
-    font-size: 18px;
-    font-weight: 700;
-    line-height:200%;
-    letter-spacing: 1.08px;
-    color: $primary-text;
-    margin-top: 20px;
-    margin-left: 24px;
-}
-.portfolio__title
-.portfolio__text{
-    padding-left: 24px;
-    padding-top: 24px;
-}
-.portfolio__text{
-    font-size: 16px;
-    font-weight: 400;
-    line-height:187.5%;
-    letter-spacing: 0.48px;
-    color: $secondary-text;
-    margin-bottom: 20px;
-    margin-left: 24px;
-}
-.portfolio__div{
-    position: relative;
-    overflow: hidden;
-}
-.botton__div{
-    @extend %flex;
+@media screen and (min-width: 1200px) {
+  .portfolio__filter-list {
+    justify-content: center;
+  }
 }
 
-
-
+// .portfolio__filter{
+//     padding-top: 94px;
+//     padding-bottom: 94px;
+// }
+// .portfolio__filter-list{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-bottom: 50px;
+//     gap: 8px;
+// }
+// .portfolio__filter-button{
+//     font-size: 16px;
+//     font-weight: 500;
+//     line-height:162.5%;
+//     letter-spacing: 0.48px;
+//     border: none;
+//     margin-right: 8px;
+//     background-color: $filter-button;
+//     border-radius: 4px;
+//  }
+//  @keyframes filterButton{
+//     0%{background-color: $filter-button;}
+//     100%{background-color: $logo-first; box-shadow: 0px 2px 2px 0px $shadow-color;}
+//  }
+//  .portfolio__filter-button:hover,
+//  .portfolio__filter-button:focus{
+//     animation-name: filterButton;
+//     animation-duration: 250ms;
+//     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//     animation-fill-mode: forwards;
+// }
+//  .portfolio__list{
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     gap: 30px;
+//  }
+//  .portfolio-item{
+//     flex-basis: calc((100% - 60px) / 3);
+//     border: 1px solid rgba(238, 238, 238, 1);
+//     max-width: 370px;
+//  }
+//  .portfolio__item:hover,
+//  .portfolio__item:focus{
+//     animation-name: portfolioItem;
+//     animation-duration: 250ms;
+//     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//     animation-fill-mode: forwards;
+// }
+// @keyframes portfolioItem{
+//     0%{box-shadow: none;}
+//     100%{box-shadow: 0px 4px 5px 0px $shadow-color;}
+//  }
+//  .portfolio__link:hover .portfolio__product-action{
+//     opacity: 1;
+//     transform: translateY(0%);
+//     overflow: hidden;
+// }
+// .portfolio__product-action{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     padding: 63px 24px;
+//     font-size: 18px;
+//     color: $header-color;
+//     letter-spacing: 0.03em;
+//     line-height: 1.6;
+//     background-color: $portfolio;
+//     transition-property: opacity, transform;
+//     transform: translateY(100%);
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
+//  .portfolio__title{
+//     font-size: 18px;
+//     font-weight: 700;
+//     line-height:200%;
+//     letter-spacing: 1.08px;
+//     color: $primary-text;
+//     margin-top: 20px;
+//     margin-left: 24px;
+// }
+// .portfolio__title
+// .portfolio__text{
+//     padding-left: 24px;
+//     padding-top: 24px;
+// }
+// .portfolio__text{
+//     font-size: 16px;
+//     font-weight: 400;
+//     line-height:187.5%;
+//     letter-spacing: 0.48px;
+//     color: $secondary-text;
+//     margin-bottom: 20px;
+//     margin-left: 24px;
+// }
+// .portfolio__div{
+//     position: relative;
+//     overflow: hidden;
+// }
+// .botton__div{
+//     @extend %flex;
+// }
