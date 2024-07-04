@@ -733,7 +733,8 @@ img {
 
 .footer__wrap {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer__logo {
@@ -779,13 +780,14 @@ img {
 }
 
 .footer__socials {
-  margin-left: 70px;
+  align-items: center;
 }
 
 .footer__joing {
   color: rgb(245, 244, 250);
   margin-bottom: 20px;
   margin-top: 60px;
+  margin-left: 167px;
 }
 
 .footer__list {
