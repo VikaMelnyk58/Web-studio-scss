@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/main.min.css">
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__wrap">
           <nav class="header__navigation">
               <a class="header__logo" href="index.html"><span class="header__logo-span">Web</span>Studio</a>
@@ -51,7 +51,23 @@
               </li>
           </ul>
       </div>
-  </header> -->
+      <!-- Mobile-menu -->
+      <button class="menu-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu"> 
+        <svg class="menu-button__open">
+            <use></use>
+        </svg>
+    </button>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-button js-close-menu" aria-expanded="false" aria-controls="mobile-menu"> 
+            <svg class="menu-button__close">
+                <use></use>
+            </svg>
+        </button>
+
+        <div class="menu-box"></div>
+    </div>
+  </header>
     <main>
       <section class="portfolio__filter">
         <div class="container portfolio__filter__wrap">
@@ -322,5 +338,9 @@
           </label> 
       </div> 
   </footer>
+  <script src="./js/mobile-menu.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
   </body>
 </html>
