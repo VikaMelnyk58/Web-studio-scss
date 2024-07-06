@@ -9,6 +9,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 auto;
+}
+.clients__item{
+    margin: 0 auto;
 }
 .clients__link{
     border: solid 1px $icon-color;

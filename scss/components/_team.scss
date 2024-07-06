@@ -38,7 +38,6 @@
     @extend %flex;
     gap: 10px;
     margin-bottom: 30px;
-    margin-top: 16px;
 }
 .team__title{
     @include title();
