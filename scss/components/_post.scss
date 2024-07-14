@@ -11,6 +11,14 @@
   padding-top: 118px;
   padding-bottom: 118px;
 }
+@media (min-device-pixel-ratio: 2), 
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx){
+    .post{
+        background-image: url(./img/post-one@2x.png);
+    }
+}
 .post__title {
   font-size: 26px;
   font-weight: 900;
